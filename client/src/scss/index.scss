@@ -1,0 +1,266 @@
+@import './media';
+@import './restext';
+@import './mixin';
+@import './varible';
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Dancing+Script&family=Lato:ital,wght@0,100;1,100&family=Mochiy+Pop+One&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,100;1,300;1,500&family=Raleway:wght@100&family=Roboto:wght@300&family=Source+Sans+Pro:ital,wght@0,200;0,900;1,400;1,900&display=swap');
+
+$pink:rgb(255, 99, 132);
+$blue:rgb(54, 162, 235);
+$yollows:rgb(255, 205, 86);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+   
+ 
+    
+}
+
+body {
+
+    
+     background-color: #ffff;
+  } 
+
+  html {
+
+    font-family: 'Poppins', sans-serif;
+  }
+
+
+
+ 
+   .container{
+     max-width: 80%;
+     margin: auto;
+   }
+ 
+ 
+   a{
+     text-decoration: none;
+     color: #000;
+   }
+ 
+   li{
+     list-style: none;
+   }
+ 
+.tit{
+  background-color: black;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 900;
+}
+ 
+   .app{
+    @include flex(center,space-between , row, 0);
+    @include respond-below(sm){
+      
+      @include flex(center,space-between ,column, 20px);
+    }
+   }
+
+
+   .wrp{
+     @include flex(center, center, column , 20px);
+     
+     margin-top: 10px;
+
+     h1{
+       display: block;
+       padding: 20px;
+       background-color: $heading-color;
+       width: 100%;color: white;
+       
+     }
+   }
+
+
+   .graph{
+    padding: 20px;
+    width: 100%;
+  }
+
+   .graph-box{
+    @include respond-below(sm){
+      width: 100%;
+    }
+        .chart{
+         position: relative;
+        
+          h3{
+            width: 10%;
+            position: absolute;
+            right: 0;
+            left: 0;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            top: 42%;
+            text-transform: capitalize;
+            span{
+              color: $blue;
+            }
+
+          }
+        }
+
+   }
+
+   .lebleboxs{
+    text-transform: capitalize;
+    @include flex(start,start,   column , 15px);
+
+    .text{
+      width: 100%;
+ 
+      h3{
+        font-weight: 300;
+         position: relative;
+         font-size: 14px;
+      
+        .it{
+      
+          position: absolute;
+          height: 100%;
+          width: 8px ;
+          bottom: 0;
+          left: -13px; 
+          border-radius: 4px;    
+        }
+      }
+      @include flex(start,space-between ,  row , 0);
+               
+      span{
+        font-weight: 900;
+       justify-self: flex-end;
+      }
+      
+    }
+   }
+
+   .form-main{
+    width: 30%;
+
+    @include respond-below(sm){
+      
+      width: 100%;
+       }
+    .history{
+      margin-top: 30px;
+      text-align: center;
+      width: 100%;
+      h3{
+        padding: 10px;
+
+      }
+      .box{
+       
+        
+       
+        @include flex(center, center ,  column , 20px);
+           span{
+             display: block;
+             width: 100%;
+             background-color: whitesmoke;
+             padding: 10px;
+             text-transform: capitalize;
+             text-align: start;
+             align-items: center;
+                  
+        @include flex(center, start ,  row , 20px);
+          
+             svg{
+           
+               transition: all .3s ease-in-out;
+              
+               &:hover{
+                 color: $pink;
+              
+               }
+
+             }
+            
+           }
+      }
+    }
+
+   }
+
+   .form{
+     
+     
+    margin-top: 10px;
+    background-color: whitesmoke;
+    padding: 10px;
+
+    @include respond-below(sm){
+      
+   width: 100%;
+    }
+    h3{
+      text-align: center;
+      width: 100%;
+      display: block;
+      color:$blue;
+      padding: 10px;
+    
+     }
+
+    form{
+width: 100%;
+
+      @include flex(center,space-between , column , 15px);
+      
+        input {
+         width: 100%;
+         outline: none;
+         height: 5vh;
+         border: none;
+         border-radius: 10px;
+         padding: 15px;
+       }
+
+      .option{
+        width: 100%;
+         @extend input;
+         padding: 0;
+         text-transform: capitalize;
+          padding-left: 12px;
+
+    
+          .option{
+            border: none;
+            background-color: white;
+
+          }
+          
+      }
+      
+       button{
+         padding: 10px;
+         text-align: center;
+        font-size: 15px;
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: $pink;
+        color: white;
+        border-radius: 10px;
+        transition: all .4s  ease-in-out;
+        margin-bottom: 10px;
+        &:hover{
+          background-color: $yollows;
+        }
+       }
+
+    }
+      
+     
+   }
